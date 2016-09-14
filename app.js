@@ -210,7 +210,7 @@ $('button').click(function () {
             } catch (e) {}
         });
 
-	w1.location =  'http://ayal.github.io/tubi/#' + JSON.stringify(hash);
+	w1.location =  'http://ayal.github.io/tubi/#' + encodeURIComponent(JSON.stringify(hash));
 
     });
 
