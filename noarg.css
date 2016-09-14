@@ -3,6 +3,7 @@ body {
     background:#333;
     text-align:center;
     color:#ddd;
+    margin:30px;
 }
 textarea {
     background:pink;
@@ -10,6 +11,7 @@ textarea {
     width:300px;
     height:300px;
     padding:10px;
+    border:5px solid #aaa;
 }
 
 button {

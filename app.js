@@ -77,13 +77,13 @@ var fetchFromPipe = function(tracks) {
 			    lessgood[cleantrk] = {s: score || 0, o: vidobj};   
 			}
 
-/*			console.log('its a ' + what, 'srch:',
+			console.log('its a ' + what, 'srch:',
 				    song,
 				    'you said: ',
 				    cleanartist,
 				    cleantrk,
 				    'tube said',
-				    cleanYTitle); */
+				    cleanYTitle); 
 			return true;
 		    }
 		    return false;
@@ -149,7 +149,7 @@ var fetchFromPipe = function(tracks) {
 		    nogood('acoustic', 1) || nogood('thumbs') || nogood('concert') || nogood('explains') ||
 		    nogood('teaser') || nogood('session', 1) || nogood('cover') || nogood('remix') ||
 		    nogood('live', 1) || nogood('perform', 2) || nogood('version', 3) ||
-		    nogood('philhar') || nogood('\\d{1,2}[\\.-/]\\d{1,2}', 0, true)) {
+		    nogood('philhar') || nogood('\\d{1,2}[\\.-/]\\d{1,2}[\\.-/]\\d{1,2}', 0, true)) {
 		    return;
 		}
 
@@ -188,6 +188,11 @@ var fetchFromPipe = function(tracks) {
 };
 
 $('button').click(function () {
+    if (!$('textarea').val().trim()) {
+	alert('put it');
+	return;
+    }
+    
     var w1 = window.open('about:blank');
     var songs = $.map($('textarea').val().replace(/ [–:] /gim, ' - ').split('\n'), function (s) {
         var x = {
