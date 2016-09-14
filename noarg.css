@@ -35,5 +35,12 @@ button:hover {
 }
 
 a, a:hover, a:active {
-    color:#ddd;
+		color:#ddd;
+		font-size:20px;
+		margin:5px;
+		text-transform:uppercase;
+	    }
+
+a:hover {
+    color:#fff;
 }
